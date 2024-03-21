@@ -69,8 +69,10 @@ for (let key in team){
 for (let i = 0; i < team.length; i++){
     let elCard = document.createElement('div');
     document.querySelector('.container').appendChild(elCard);
-    elCard.innerHTML = team[i].nome +' ' + team[i].ruolo +' ' + team[i].foto;
-}
+    // BONUS 1:
+    let realFoto = `<img src="./img/${team[i].foto}"></img>`;
+    elCard.innerHTML = team[i].nome +' ' + team[i].ruolo +' ' + realFoto;
+} 
 
 
 
