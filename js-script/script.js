@@ -103,13 +103,13 @@ for (let i = 0; i < team.length; i++){
     elCardBody.classList.add('card-body');
     document.getElementById(i).appendChild(elCardBody);
 
-        let elCardTitle = document.createElement('h5');
-        elCardTitle.classList.add('"card-title', 'text-center');
-        document.getElementById(i).appendChild(elCardTitle);
-        elCardTitle.innerHTML = team[i].nome;
+    let elCardTitle = document.createElement('h5');
+    elCardTitle.classList.add('"card-title', 'text-center');
+    document.getElementById(i).appendChild(elCardTitle);
+    elCardTitle.innerHTML = team[i].nome;
 
-        let elCardText = document.createElement('p');
-        elCardText.classList.add('card-text','pb-2', 'text-center');
-        document.getElementById(i).appendChild(elCardText);
-        elCardText.innerHTML = team[i].ruolo;
+    let elCardText = document.createElement('p');
+    elCardText.classList.add('card-text','pb-2', 'text-center');
+    document.getElementById(i).appendChild(elCardText);
+    elCardText.innerHTML = team[i].ruolo;
 };
