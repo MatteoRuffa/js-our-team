@@ -15,3 +15,7 @@ body {
     width: var(--card-size);
     border-radius: 0px!important;
 }
+
+img {
+    border-radius: 0px!important;
+}

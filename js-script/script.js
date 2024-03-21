@@ -130,30 +130,28 @@ elButton.addEventListener('click', (e)=>{
     }
     team.push(newUser);
 
-
     let elCard = document.createElement('div');
     elCard.classList.add('card', 'm-3');
-    elCard.id = '7';
+    elCard.id = team.length - 1;
     document.documentElement.style.setProperty('--card-size', 'calc((100% / 3) - 40px)');
     document.querySelector('.card-container').appendChild(elCard);
 
     let elCardImg = document.createElement('img');
     elCardImg.classList.add('card-img-top');
     elCardImg.src = `./img/${elNewUserImg}`;
-    document.getElementById('7').appendChild(elCardImg);
-    elCardImg.innerHTML = elNewUserImg;
+    elCard.appendChild(elCardImg);
 
     let elCardBody = document.createElement('div');
     elCardBody.classList.add('card-body');
-    document.getElementById('7').appendChild(elCardBody);
+    elCard.appendChild(elCardBody);
 
     let elCardTitle = document.createElement('h5');
     elCardTitle.classList.add('"card-title', 'text-center');
-    document.getElementById('7').appendChild(elCardTitle);
+    elCardBody.appendChild(elCardTitle);
     elCardTitle.innerHTML = elNewUserName;
 
     let elCardText = document.createElement('p');
     elCardText.classList.add('card-text','pb-2', 'text-center');
-    document.getElementById('7').appendChild(elCardText);
+    elCardBody.appendChild(elCardText);
     elCardText.innerHTML = elNewUserRole;
 });
