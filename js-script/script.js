@@ -59,3 +59,11 @@ team = [
     }
 ]
 console.log(team);
+
+// MILESTONE 1:
+for (let key in team){
+    console.log(key +' nome: '+ team[key].nome +' ,ruolo: '+ team[key].ruolo +' ,stringa foto: '+ team[key].foto);
+}
+
+
+// (` nome: ${team[key]} + ruolo: ${key.ruolo} + stringa della foto: ${key.foto}`)
