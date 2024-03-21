@@ -113,3 +113,19 @@ for (let i = 0; i < team.length; i++){
     document.getElementById(i).appendChild(elCardText);
     elCardText.innerHTML = team[i].ruolo;
 };
+
+// BONUS 3
+/*
+<div class="mb-3">
+  <label for="name" class="form-label">Your full name</label>
+  <input type="text" class="form-control" id="nem" placeholder="Your full name">
+</div>
+<div class="mb-3">
+  <label for="role" class="form-label">Your role in the company</label>
+  <input type="text" class="form-control" id="role" placeholder="Your role in the company">
+</div>
+<div class="mb-3">
+  <label for="formFile" class="form-label">your picture</label>
+  <input class="form-control" type="file" id="formFile">
+</div>
+*/
