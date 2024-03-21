@@ -122,7 +122,7 @@ elButton.addEventListener('click', (e)=>{
 
     const elNewUserName = document.getElementById('name').value;
     const elNewUserRole = document.getElementById('role').value;
-    const elNewUserImg = document.getElementById('formFile').value.split('\\').pop();
+    const elNewUserImg = document.getElementById('formFile').value.split('\\').pop();// qua prendo solo il nome del file senza il percorso preso in defoult dal form!
     const newUser = {
         nome: elNewUserName,
         ruolo: elNewUserRole,
@@ -156,4 +156,4 @@ elButton.addEventListener('click', (e)=>{
     elCardText.classList.add('card-text','pb-2', 'text-center');
     document.getElementById('7').appendChild(elCardText);
     elCardText.innerHTML = elNewUserRole;
-})
+});

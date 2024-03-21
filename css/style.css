@@ -1,9 +1,17 @@
+:root {
+    --mr-color-primary: #F5F5F1;
+    --mr-text-color: #333333;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
+    background-color: var(--mr-color-primary);
+    color: var(--mr-text-color);
 }
 
 .card {
     width: var(--card-size);
+    border-radius: 0px!important;
 }
