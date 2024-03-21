@@ -65,5 +65,12 @@ for (let key in team){
     console.log(key +' nome: '+ team[key].nome +' ,ruolo: '+ team[key].ruolo +' ,stringa foto: '+ team[key].foto);
 }
 
+// MILESTONE 2:
+for (let i = 0; i < team.length; i++){
+    let elCard = document.createElement('div');
+    document.querySelector('.container').appendChild(elCard);
+    elCard.innerHTML = team[i].nome +' ' + team[i].ruolo +' ' + team[i].foto;
+}
 
-// (` nome: ${team[key]} + ruolo: ${key.ruolo} + stringa della foto: ${key.foto}`)
+
+
