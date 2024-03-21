@@ -5,5 +5,5 @@ body {
 }
 
 .card {
-    width: var(--card-size);
+    width: 18rem;
 }

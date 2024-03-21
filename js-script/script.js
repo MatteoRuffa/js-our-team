@@ -87,28 +87,23 @@ for (let i = 0; i < team.length; i++){
 </div>
 */
 for (let i = 0; i < team.length; i++){
-    let elCard = document.createElement('div');
-    elCard.classList.add('card');
-    document.documentElement.style.setProperty('----card-size', '18rem');
-    document.querySelector('.card-container').appendChild(elCard);
-
     let elCardImg = document.createElement('img');
     elCardImg.classList.add('card-img-top');
     elCardImg.src = `img/${team[i].foto}`;
-    document.querySelector('.card').appendChild(elCardImg);
+    document.getElementById(i).appendChild(elCardImg);
     elCardImg.innerHTML = team[i].foto;
 
     let elCardBody = document.createElement('div');
     elCardBody.classList.add('card-body');
-    document.querySelector('.card').appendChild(elCardBody);
+    document.getElementById(i).appendChild(elCardBody);
 
         let elCardTitle = document.createElement('h5');
-        elCardTitle.classList.add('card');
-        document.querySelector('.card-body').appendChild(elCardTitle);
+        elCardTitle.classList.add('"card-title');
+        document.getElementById(i).appendChild(elCardTitle);
         elCardTitle.innerHTML = team[i].nome;
 
-        let elCardText = document.createElement('h5');
-        elCardText.classList.add('card');
-        document.querySelector('.card-body').appendChild(elCardText);
-        elCardTitle.innerHTML = team[i].ruolo;
+        let elCardText = document.createElement('p');
+        elCardText.classList.add('card-text');
+        document.getElementById(i).appendChild(elCardText);
+        elCardText.innerHTML = team[i].ruolo;
 };
