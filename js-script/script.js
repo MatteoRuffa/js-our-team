@@ -66,6 +66,7 @@ for (let key in team){
 }
 
 // MILESTONE 2:
+/*
 for (let i = 0; i < team.length; i++){
     let elCard = document.createElement('div');
     document.querySelector('.container').appendChild(elCard);
@@ -73,6 +74,41 @@ for (let i = 0; i < team.length; i++){
     let realFoto = `<img src="./img/${team[i].foto}"></img>`;
     elCard.innerHTML = team[i].nome +' ' + team[i].ruolo +' ' + realFoto;
 } 
+*/
 
+// BONUS 2:
+/*
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text"></p>
+  </div>
+</div>
+*/
+for (let i = 0; i < team.length; i++){
+    let elCard = document.createElement('div');
+    elCard.classList.add('card');
+    document.documentElement.style.setProperty('----card-size', '18rem');
+    document.querySelector('.card-container').appendChild(elCard);
 
+    let elCardImg = document.createElement('img');
+    elCardImg.classList.add('card-img-top');
+    elCardImg.src = `img/${team[i].foto}`;
+    document.querySelector('.card').appendChild(elCardImg);
+    elCardImg.innerHTML = team[i].foto;
 
+    let elCardBody = document.createElement('div');
+    elCardBody.classList.add('card-body');
+    document.querySelector('.card').appendChild(elCardBody);
+
+        let elCardTitle = document.createElement('h5');
+        elCardTitle.classList.add('card');
+        document.querySelector('.card-body').appendChild(elCardTitle);
+        elCardTitle.innerHTML = team[i].nome;
+
+        let elCardText = document.createElement('h5');
+        elCardText.classList.add('card');
+        document.querySelector('.card-body').appendChild(elCardText);
+        elCardTitle.innerHTML = team[i].ruolo;
+};
