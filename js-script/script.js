@@ -98,12 +98,12 @@ for (let i = 0; i < team.length; i++){
     document.getElementById(i).appendChild(elCardBody);
 
         let elCardTitle = document.createElement('h5');
-        elCardTitle.classList.add('"card-title');
+        elCardTitle.classList.add('"card-title', 'text-center');
         document.getElementById(i).appendChild(elCardTitle);
         elCardTitle.innerHTML = team[i].nome;
 
         let elCardText = document.createElement('p');
-        elCardText.classList.add('card-text');
+        elCardText.classList.add('card-text','pb-2', 'text-center');
         document.getElementById(i).appendChild(elCardText);
         elCardText.innerHTML = team[i].ruolo;
 };
