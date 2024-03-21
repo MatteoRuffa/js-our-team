@@ -87,6 +87,12 @@ for (let i = 0; i < team.length; i++){
 </div>
 */
 for (let i = 0; i < team.length; i++){
+    let elCard = document.createElement('div');
+    elCard.classList.add('card', 'm-3');
+    elCard.id = i;
+    document.documentElement.style.setProperty('--card-size', 'calc((100% / 3) - 40px)');
+    document.querySelector('.card-container').appendChild(elCard);
+
     let elCardImg = document.createElement('img');
     elCardImg.classList.add('card-img-top');
     elCardImg.src = `img/${team[i].foto}`;
