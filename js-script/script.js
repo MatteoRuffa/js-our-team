@@ -122,7 +122,7 @@ elButton.addEventListener('click', (e)=>{
 
     const elNewUserName = document.getElementById('name').value;
     const elNewUserRole = document.getElementById('role').value;
-    const elNewUserImg = document.getElementById('formFile').value;
+    const elNewUserImg = document.getElementById('formFile').value.split('\\').pop();
     const newUser = {
         nome: elNewUserName,
         ruolo: elNewUserRole,
@@ -139,7 +139,7 @@ elButton.addEventListener('click', (e)=>{
 
     let elCardImg = document.createElement('img');
     elCardImg.classList.add('card-img-top');
-    elCardImg.src = `img/${elNewUserImg}`;
+    elCardImg.src = `./img/${elNewUserImg}`;
     document.getElementById('7').appendChild(elCardImg);
     elCardImg.innerHTML = elNewUserImg;
 
