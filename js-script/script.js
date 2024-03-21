@@ -115,17 +115,45 @@ for (let i = 0; i < team.length; i++){
 };
 
 // BONUS 3
-/*
-<div class="mb-3">
-  <label for="name" class="form-label">Your full name</label>
-  <input type="text" class="form-control" id="nem" placeholder="Your full name">
-</div>
-<div class="mb-3">
-  <label for="role" class="form-label">Your role in the company</label>
-  <input type="text" class="form-control" id="role" placeholder="Your role in the company">
-</div>
-<div class="mb-3">
-  <label for="formFile" class="form-label">your picture</label>
-  <input class="form-control" type="file" id="formFile">
-</div>
-*/
+const elButton = document.querySelector('.btn.btn-primary');
+
+elButton.addEventListener('click', (e)=>{
+    e.preventDefault();
+
+    const elNewUserName = document.getElementById('name').value;
+    const elNewUserRole = document.getElementById('role').value;
+    const elNewUserImg = document.getElementById('formFile').value;
+    const newUser = {
+        nome: elNewUserName,
+        ruolo: elNewUserRole,
+        foto: elNewUserImg
+    }
+    team.push(newUser);
+
+
+    let elCard = document.createElement('div');
+    elCard.classList.add('card', 'm-3');
+    elCard.id = '7';
+    document.documentElement.style.setProperty('--card-size', 'calc((100% / 3) - 40px)');
+    document.querySelector('.card-container').appendChild(elCard);
+
+    let elCardImg = document.createElement('img');
+    elCardImg.classList.add('card-img-top');
+    elCardImg.src = `img/${elNewUserImg}`;
+    document.getElementById('7').appendChild(elCardImg);
+    elCardImg.innerHTML = elNewUserImg;
+
+    let elCardBody = document.createElement('div');
+    elCardBody.classList.add('card-body');
+    document.getElementById('7').appendChild(elCardBody);
+
+    let elCardTitle = document.createElement('h5');
+    elCardTitle.classList.add('"card-title', 'text-center');
+    document.getElementById('7').appendChild(elCardTitle);
+    elCardTitle.innerHTML = elNewUserName;
+
+    let elCardText = document.createElement('p');
+    elCardText.classList.add('card-text','pb-2', 'text-center');
+    document.getElementById('7').appendChild(elCardText);
+    elCardText.innerHTML = elNewUserRole;
+})
