@@ -86,6 +86,7 @@ for (let i = 0; i < team.length; i++){
   </div>
 </div>
 */
+//DI POTEVA FARE TUTTO L'INTERNO CON UNA STRINGA (UN TEMPLATE)
 for (let i = 0; i < team.length; i++){
     let elCard = document.createElement('div');
     elCard.classList.add('card', 'm-3');
